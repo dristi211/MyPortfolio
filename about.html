@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="about" href="about.html">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    
+.playwrite{
+  font-family: "Playwrite AU SA", cursive;
+  font-optical-sizing: auto;
+  font-weight:600;
+  font-style: bold;
+}
+.roboto-regular {
+  font-family: "sans-serif";
+  font-style: italic;
+  font-size: 18px; /* Base font size */
+  line-height: 1.5; /* Line height for readability */
+}
+
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; /* Heading font */
+}
+
+
+.container {
+    max-width: 950px; /* Adjust based on your design */
+    margin: auto; /* Centers the container */
+    text-align: justify;
+    font-family: "Roboto", sans-serif;
+
+}
+.image-right {
+      float: right;
+      margin-left: 150px;
+      height: inherit;
+    }
+    .text-content {
+      overflow: hidden; /* Prevents text from wrapping under the image */
+    }
+    footer {
+text-align: center;
+padding: 20px;
+background-color: #333;
+color: #fff;
+}
+.collage-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px; /* Space between thumbnails */
+    padding: 30px; /* Padding around the collage */
+}
+.collage-item {
+    position: relative; /* For absolute positioning of overlay effects */
+    overflow: hidden; /* Hide overflow to keep images in bounds */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1); /*Subtle shadow effect */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.collage-item:hover {
+    transform: scale(1.05); /* Slightly zoom image on hover */
+}
+
+.collage-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove gap below images */
+}
+.thumbnail {
+    overflow: hidden; /* Hide overflow if images are larger than the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    transition: transform 0.2s; /* Animation for hover effect */
+}
+
+.thumbnail:hover {
+    transform: scale(1.05); /* Scale up thumbnail on hover */
+}
+
+.thumbnail img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+}
+
+.container {
+    overflow: hidden; /* Clear floats */
+    padding: 20px; /* Add some padding */
+}
+
+.text {
+    float: right; /* Float text to the right */
+    width: 58%; /* Adjust as needed */
+    padding-left: 40px; /* Space between text and image */
+}
+
+.image {
+    float: left; /* Float image to the left */
+    width: 42%; /* Adjust as needed */
+}
+
+.image img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+  </style>
+</head>
+  <body class="light-mode text-bg-primmary p-3">
+ 
+    <!-- Header Section -->
+     <header>
+    <body>
+      <div class="container text-center">
+        
+        <!-- <h1 class="animated-text">Hello, Welcome to My Portfolio!</h1>
+        <p class="lead">Front-End Developer | Web Enthusiast</p> -->
+      </div>
+    
+   
+    
+      <!-- <h1 class="text-bg-secondary nav-justified p-3">Welcome to My Portfolio</h1> -->
+      
+    </header>
+    
+    <ul class="nav bg-dark justify-content-end">
+    
+      <!-- <img src="/MyPortfolio/images/MyLogo3.jpg" class="img-fluid rounded-circle justify-left" alt="...">  -->
+      <!-- <ul class="nav nav-tabs">
+        <img src="" alt="Logo" class="navbar-brand d-inline-block align-text-left">
+    
+      </ul> -->
+      <a class="navbar-brand fs-2 align-text-left text-bg-primmary me-auto p-3" href="./index.html">
+        <img src="/MyPortfolio/images/MyLogo4.jpg" class="img-fluid rounded-circle" alt="...">
+        <!-- <img src="/MyPortfolio/images/MyLogo3.jpg" alt="Logo" class="d-inline-block align-text-top"> -->
+        
+      </a>
+       <!-- Navbar toggle for mobile view -->
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <li class="nav-item pt-3">      
+          <a class="nav-link active" aria-current="page" href="./about.html">About</a>
+        </li>
+        <li class="nav-item pt-3">
+          <a class="nav-link" href="./projects.html">Projects</a>
+        </li>
+        <li class="nav-item pt-3">
+          <a class="nav-link" href="./services.html">Services</a>
+        </li>
+        <li class="nav-item pt-3">
+          <a class="nav-link" href="./contact.html">Contact</a>
+        </li>
+        <li class="nav-item pt-3">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+        <!-- Light/Dark mode toggle -->
+        <button id="theme-toggle" class="btn btn-outline-secondary ms-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-sun-fill" viewBox="0 0 16 16">
+          <path d="M11.473 11a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"/>
+          <path d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708zm1.734 3.374a2 2 0 1 1 3.296 2.198q.3.423.516.898a3 3 0 1 0-4.84-3.225q.529.017 1.028.129m4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377M14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"/>
+        </svg></button>
+        
+      </ul>
+    </div>
+  
+    <!-- About Section -->
+     
+    <div class="text-content container text-justify">
+      <div class="row">
+        <div class="col-md-6">
+    <section id="about">
+      <h2 class="playwrite mt-3 p-3">About Me</h2>
+      <p class="roboto-regular word-spacing:-2px mt-5 p-0 m-3">
+        I am a detail-oriented individual driven by a passion for excellence, I possess a steadfast commitment to delivering high-quality work in all endeavors. With a background in Web Development, I am adept at leveraging my skills and knowledge to make meaningful contributions to any team or project. I thrive in dynamic environments where precision and attention to detail are paramount, and I am constantly seeking opportunities to exceed expectations. My dedication to ensuring the utmost quality in everything I do makes me an invaluable asset to any organization. 
+
+      </p>
+     
+    </div>
+       <div class="col-md-6">
+        <img src="./images/Dristi_img.png" class="align-items: flex-start pl-" alt="...">
+       </div>
+       <div class="container">
+        <div class="text">
+       <div class="col-md-12">
+        <div class="image-container">
+      <p class="roboto-regular text-justify word-spacing:-2px mt-5">I love cooking, baking, and reading 
+        in my spare time. I enjoy traveling a lot, whenever I got a chance I go out with my family for a
+        long drive or a vacation. I have visited more than 15 countries around
+        the world. When visited different places not only gives me pleasure
+        but also provides me huge experience. Traveling allowed me to meet
+        different people and know their culture and food.</p>
+      </div> 
+       </div>
+        </div>
+      <div class="image">
+    <div class="collage-container">
+      <div class="image-container">
+      <!-- <div class="collage-item">
+          <img src="./images/Iceberg.jpg" alt="Thumbnail 1">
+      </div> -->
+     
+      <div class="collage-item pl-0">
+          <img src="./images/Humpback.JPG" alt="Thumbnail 2">
+      </div>
+      <br>
+      <div class="collage-item pl-0">
+          <img src="./images/niagara (1).JPG" alt="Thumbnail 3">
+      </div>
+      </div>
+    </div>
+       </div>
+       </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </body>
+      <!-- <div class="collage-item">
+      <a href="https://www.flaticon.com/free-icons/leaves" title="leaves icons">Leaves icons created by bakar015 - Flaticon</a>
+          <img src="./images/dubai.JPG" alt="Thumbnail 4">
+      </div> -->
+      
+      <!-- <div class="thumbnail">
+          <img src="https://via.placeholder.com/300" alt="Thumbnail 5">
+      </div>
+      <div class="thumbnail">
+          <img src="https://via.placeholder.com/300" alt="Thumbnail 6">
+      </div> -->
+  
+          <!-- <img src="" class="img-fluid pt-4 rounded float-none" alt="" />
+         
+      
+       
+          <img src="" class="img-fluid pt-4 rounded float-end" alt="" />
+          
+       
+       
+          <img src="" class="img-fluid pt-4 rounded float-none" alt="" />
+          
+         Some of the places I
+        lived for a longer time and other places I went just for vacation. I
+        had an amazing experience seeing the 25,000-year-old iceberg (the
+        first picture on the bottom ) while I was in St. John's, Newfoundland.
+        Also one summer in 2013, we went for a whale watch and saw a family of
+        three humpback whales (second picture on the right). Among all the
+        beautiful places I visited, some of the places are really special to
+        my memories. Those places are Makkah and Madinah in Saudi Arabia,
+        Signal Hill and Niagara Falls in Canada, Smokey Mountain and Grand
+        Canyon in the USA, Eiffel Tower and Mont-Saint-Michel in France, and
+        The Isle of Skye in Scotland.
+  
+          <img src="" class="img-fluid pt-4 rounded float-end" alt="" /> -->
+          
+        <p class="mt-5 font-monospace">
+          Images taken by me: Top left corner-<em>Iceberg, St. John's, Newfoundland.</em> Top right corner-<em>Humpback Whale, St. John's, Newfoundland.</em>
+         Bottom left corner-<em>Niagara Falls, Buffalo USA.</em> Bottom right corner-<em>Light Dance, Dubai, UAE.</em>
+        
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy;<img src="./images/maple-5.png" alt="maple">2024 My Portfolio. All rights reserved.</p>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // JavaScript for toggling light and dark mode
+      const toggleButton = document.getElementById('theme-toggle');
+      const body = document.body;
+  
+      toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+  
+        // Update button text based on the current mode
+        if (body.classList.contains('dark-mode')) {
+          toggleButton.textContent = 'Light Mode';
+        } else {
+          toggleButton.textContent = 'Dark Mode';
+        }
+      });
+    </script>
+  </body>
+  </html>
