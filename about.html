@@ -27,8 +27,9 @@
   font-optical-sizing: auto;
   font-weight:600;
   font-style: bold;
+  padding-top: 20px;
 }
-.roboto-regular {
+.roboto-regular { 
   font-family: "sans-serif";
   font-style: italic;
   font-size: 18px; /* Base font size */
@@ -116,13 +117,22 @@ color: #fff;
 .image {
     float: left; /* Float image to the left */
     width: 42%; /* Adjust as needed */
+    background-color:whitesmoke ;
 }
 
 .image img {
     max-width: 100%; /* Responsive image */
     height: auto; /* Maintain aspect ratio */
+    background-color:whitesmoke ;
 }
-
+.light-mode {
+  background-image: url('./images/pattern.jpg');
+            background-repeat:repeat-y; /* Repeat the pattern */
+            height: 100vh; /* Full height */
+            margin: 0;
+            background-color: whitesmoke;
+}
+  
   </style>
 </head>
   <body class="light-mode text-bg-primmary p-3">
@@ -133,7 +143,8 @@ color: #fff;
  
         <!-- Header Section -->
          <header>
-        <body>
+        <body class="light-mode text-bg-primmary">
+          
           <div class="container text-center">
             
             <!-- <h1 class="animated-text">Hello, Welcome to My Portfolio!</h1>
@@ -188,28 +199,27 @@ color: #fff;
      
     <div class="text-content container text-justify">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 p-3">
     <section id="about">
       <h2 class="playwrite mt-3 p-3">About Me</h2>
-      <p class="roboto-regular word-spacing:-2px mt-5 p-0 m-3">
-        I am a detail-oriented individual driven by a passion for excellence, I possess a steadfast commitment to delivering high-quality work in all endeavors. With a background in Web Development, I am adept at leveraging my skills and knowledge to make meaningful contributions to any team or project. I thrive in dynamic environments where precision and attention to detail are paramount, and I am constantly seeking opportunities to exceed expectations. My dedication to ensuring the utmost quality in everything I do makes me an invaluable asset to any organization. 
-
+      <p class="roboto-regular word-spacing:5px mt-5 p-3">
+        I possess a steadfast commitment to delivering high-quality work in all endeavors. With a background in Web Development, I am adept at leveraging my skills and knowledge to make meaningful contributions to any team or project. I thrive in dynamic environments where precision and attention to detail are paramount, and I am constantly seeking opportunities to exceed expectations
       </p>
      
     </div>
+    
        <div class="col-md-6">
-        <img src="./images/Dristi_img.png" class="align-items: flex-start pl-" alt="...">
+        <img src="./images/Dristi_img.png" class="mypic align-items: flex-start" alt="my pic">
        </div>
        <div class="container">
         <div class="text">
        <div class="col-md-12">
         <div class="image-container">
-      <p class="roboto-regular text-justify word-spacing:-2px mt-5">I love cooking, baking, and reading 
-        in my spare time. I enjoy traveling a lot, whenever I got a chance I go out with my family for a
-        long drive or a vacation. I have visited more than 15 countries around
-        the world. When visited different places not only gives me pleasure
-        but also provides me huge experience. Traveling allowed me to meet
-        different people and know their culture and food.</p>
+      <p class="roboto-regular text-justify word-spacing:5px mt-5">I have a passion for cooking, baking, and reading during my leisure time. I also love to travel, and whenever I get the chance, I enjoy going on long drives or vacations with my family. I've had the opportunity to visit over 15 countries around the world. Exploring different places not only brings me joy but also offers me invaluable experiences. Traveling has allowed me to meet a variety of people and immerse myself in their cultures and cuisines.</p>
+        <p class="mt-5 font-monospace">
+          <em>Images captured by me include:Top left: Humpback Whale, St. John's, Newfoundland; </em> <em>Bottom left: Iceberg, St. John's, Newfoundland. </em>
+        
+        </p>
       </div> 
        </div>
         </div>
@@ -224,9 +234,12 @@ color: #fff;
           <img src="./images/Humpback.JPG" alt="Thumbnail 2">
       </div>
       <br>
+      <!-- <div class="collage-item pl-0">
+          <img src="./images/Iceberg.jpg" alt="Thumbnail 3">
+      </div> -->
       <div class="collage-item pl-0">
-          <img src="./images/niagara (1).JPG" alt="Thumbnail 3">
-      </div>
+        <img src="./images/dubai.JPG" alt="Thumbnail 3">
+    </div> 
       </div>
     </div>
        </div>
@@ -275,11 +288,7 @@ color: #fff;
   
           <img src="" class="img-fluid pt-4 rounded float-end" alt="" /> -->
           
-        <p class="mt-5 font-monospace">
-          Images taken by me: Top left corner-<em>Iceberg, St. John's, Newfoundland.</em> Top right corner-<em>Humpback Whale, St. John's, Newfoundland.</em>
-         Bottom left corner-<em>Niagara Falls, Buffalo USA.</em> Bottom right corner-<em>Light Dance, Dubai, UAE.</em>
         
-        </p>
       </div>
     </div>
   </div>

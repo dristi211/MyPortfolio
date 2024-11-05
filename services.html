@@ -68,6 +68,13 @@ width: calc(25% - 40px); /* Four cards in a row */
 .service-card:hover {
 transform: translateY(-5px); /* Slight lift on hover */
 }
+.light-mode {
+  background-image: url('./images/pattern.jpg');
+            background-repeat:repeat-y; /* Repeat the pattern */
+            height: 100vh; /* Full height */
+            margin: 0;
+            background-color: whitesmoke;
+}
 
 footer {
 text-align: center;
@@ -82,7 +89,7 @@ color: #fff;
    
       <!-- Header Section -->
        <header>
-      <body>
+      <body class="light-mode text-bg-primmary p-3">
         <div class="container text-center">
           
           <!-- <h1 class="animated-text">Hello, Welcome to My Portfolio!</h1>
