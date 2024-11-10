@@ -8,22 +8,17 @@
   <title>My Portfolio</title>
   <link rel="about" href="about.html">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
   <style>
     
 .playwrite{
-  font-family: "Playwrite AU SA", cursive;
+  font-family: "Playwrite AU SA", "cursive";
   font-optical-sizing: auto;
   font-weight:600;
   font-style: bold;
@@ -54,10 +49,10 @@ h1, h2, h3 {
       margin-left: 150px;
       height: inherit;
     }
-    .text-content {
+.text-content {
       overflow: hidden; /* Prevents text from wrapping under the image */
     }
-    footer {
+footer {
 text-align: center;
 padding: 20px;
 background-color: #333;
@@ -132,15 +127,77 @@ color: #fff;
             margin: 0;
             background-color: whitesmoke;
 }
+.toggle-button {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+.bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+        }
+/* Base styles for navigation */
+/* nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 0px;
+    height: 100px;
+} */
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack items vertically */
+    }
+    nav ul {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        width: 100%;
+    }
+    nav.active ul {
+        display: flex; /* Show menu when active */
+    }
+}
+/* nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px;
+            
+        }
+nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        } */
+ @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            nav.active ul {
+                display: flex;
+            }
+.toggle-button {
+                display: flex;
+            }
+        }
+
   
   </style>
 </head>
-  <body class="light-mode text-bg-primmary p-3">
- 
-    <!-- Header Section -->
-     <header>
-      <body class="light-mode text-bg-primmary">
- 
+  
         <!-- Header Section -->
          <header>
         <body class="light-mode text-bg-primmary">
@@ -155,38 +212,34 @@ color: #fff;
         
           <!-- <h1 class="text-bg-secondary nav-justified p-3">Welcome to My Portfolio</h1> -->
           
-        </header>
+       
+        <ul class="nav bg-dark justify-content-end ml-auto mt-3">
         
-        <ul class="nav ms-auto bg-dark justify-content-end pt-3">
         
-          <!-- <img src="/MyPortfolio/images/MyLogo3.jpg" class="img-fluid rounded-circle justify-left" alt="...">  -->
-          <!-- <ul class="nav nav-tabs">
-            <img src="" alt="Logo" class="navbar-brand d-inline-block align-text-left">
-        
-          </ul> -->
-          <a class="navbar-brand me-auto fs-2 align-text-left text-bg-primmary p-3" href="./index.html">
+          <a class="navbar-brand me-auto fs-2 align-text-left text-bg-primmary" href="./index.html">
             <!-- <img src="/MyPortfolio/images/MyLogo3.jpg" alt="Logo" class="d-inline-block align-text-top"> -->
-            <img src="./images/MyLogo3.jpg" class="img-fluid rounded-circle" alt="Logo">
+            <img src="./images/MyLogo3.jpg" class="img-fluid rounded-circle justify-content-end p-3" alt="Logo">
           </a>
            <!-- Navbar toggle for mobile view -->
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-            <li class="nav-item ms-auto mt-3">      
-              <a class="nav-link active" aria-current="page" href="./about.html">About</a>
+          
+            <li class="nav-item mt-3">      
+              <a class="nav-link active text-white" aria-current="page" href="./about.html">About</a>
             </li>
             
             <li class="nav-item mt-3">
-              <a class="nav-link" href="./projects.html">Projects</a>
+              <a class="nav-link text-white" href="./projects.html">Projects</a>
             </li>
             <li class="nav-item mt-3">
-              <a class="nav-link" href="./services.html">Services</a>
+              <a class="nav-link text-white" href="./services.html">Services</a>
             </li>
             <li class="nav-item mt-3">
-              <a class="nav-link" href="./contact.html">Contact</a>
+              <a class="nav-link text-white" href="./contact.html">Contact</a>
             </li>
             <li class="nav-item mt-3">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <a class="nav-link disabled" aria-disabled="true"></a>
             </li>
             <!-- Light/Dark mode toggle -->
             <button id="theme-toggle" class="btn btn-outline-secondary ms-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-sun-fill" viewBox="0 0 16 16">
@@ -195,6 +248,8 @@ color: #fff;
             </svg></button>
             
           </ul>
+        </header>
+        
     <!-- About Section -->
      
     <div class="text-content container text-justify">
@@ -297,11 +352,7 @@ color: #fff;
 <footer>
   <p>&copy;<img src="./images/maple-5.png" alt="maple">2024 My Portfolio. All rights reserved.</p>
 </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
+ <script> 
       // JavaScript for toggling light and dark mode
       const toggleButton = document.getElementById('theme-toggle');
       const body = document.body;
@@ -317,6 +368,16 @@ color: #fff;
           toggleButton.textContent = 'Dark Mode';
         }
       });
+      
     </script>
+    
+      <!-- Your content here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
   </body>
   </html>

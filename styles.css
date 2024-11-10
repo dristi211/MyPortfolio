@@ -155,7 +155,21 @@ body {
   justify-content: center;
   align-items: center;
 }
+.navbar {
+  padding: 1rem;
+}
 
+.navbar-toggler {
+  border: none; /* Remove border from the toggler */
+}
+
+.navbar-toggler:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+.navbar-toggler-icon {
+  background-color: #333; /* Change color of the icon */
+}
 
 
 
