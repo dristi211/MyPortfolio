@@ -31,7 +31,15 @@
   line-height: 1.5; /* Line height for readability */
 }
 
+/* Custom dark mode styles */
+.light-mode .navbar {
+      background-color: white;
+    }
 
+    .light-mode .navbar-light .navbar-brand,
+    .light-mode .navbar-light .nav-link {
+      color: black;
+    }
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif; /* Heading font */
 }
@@ -237,6 +245,10 @@ nav ul li a {
     p{
       font-size: 1rem;
     }
+    .collage-item img {
+    width: 100%; /* Make images responsive */
+   
+    }
 }
 
   </style>
@@ -405,13 +417,14 @@ nav ul li a {
           toggleButton.textContent = 'Dark Mode';
         }
       });
-      const hamburger = document.getElementById('hamburger');
+      
+const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active'); // Toggle the visibility of the nav links
 });
-
+      
       
     </script>
     

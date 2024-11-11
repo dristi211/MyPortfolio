@@ -53,7 +53,15 @@ section {
 padding: 20px;
 text-align: center;
 }
+/* Custom dark mode styles */
+.light-mode .navbar {
+      background-color: white;
+    }
 
+    .light-mode .navbar-light .navbar-brand,
+    .light-mode .navbar-light .nav-link {
+      color: black;
+    }
 .service-card {
 background: #fff;
 border-radius: 8px;
@@ -334,6 +342,7 @@ card.addEventListener('click', () => {
   alert('More details about ' + card.querySelector('h3').innerText);
 });
 });
+
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 
