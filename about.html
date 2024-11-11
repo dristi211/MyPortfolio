@@ -192,55 +192,92 @@ nav ul li a {
 .toggle-button {
                 display: flex;
             }
+            .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+        }
         }
 
   
+ /* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+         /* Hide nav links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: black;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+    nav {
+        flex-direction: column; /* Stack items vertically */
+    }
+    nav ul {
+        /*display: none; /* Hide the menu by default */
+        flex-direction: column;
+        width: 100%;
+    }
+    nav.active ul {
+        display: flex; /* Show menu when active */
+    }
+    h5 {
+      font-size: 0.6rem; /* Smaller title on medium screens */  
+    }
+    p{
+      font-size: 1rem;
+    }
+}
+
   </style>
 </head>
+
+   <header>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark p-3">
+    <div class="container text-right">
+   
+    <a class="navbar-brand" href="./index.html">
+      
+      <img src="./images/MyLogo3.jpg" class="img-fluid rounded-circle justify-content-end" alt="Logo">
+    </a>
+     <!-- Navbar toggle for mobile view -->
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">      
+        <a class="nav-link text-white" aria-current="page" href="./about.html">About</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link text-white" href="./projects.html">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="./services.html">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="./contact.html">Contact</a>
+      </li>
+      <li class="nav-item1">
+        <a class="nav-link disabled" aria-disabled="true"></a>
+      </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
   
-        <!-- Header Section -->
-         <header>
-        <body class="light-mode text-bg-primmary">
-          
-          <div class="container text-center">
-            
-            <!-- <h1 class="animated-text">Hello, Welcome to My Portfolio!</h1>
-            <p class="lead">Front-End Developer | Web Enthusiast</p> -->
-          </div>
-        
-       
-        
-          <!-- <h1 class="text-bg-secondary nav-justified p-3">Welcome to My Portfolio</h1> -->
-          
-       
-        <ul class="nav bg-dark justify-content-end ml-auto mt-3">
-        
-        
-          <a class="navbar-brand me-auto fs-2 align-text-left text-bg-primmary" href="./index.html">
-            <!-- <img src="/MyPortfolio/images/MyLogo3.jpg" alt="Logo" class="d-inline-block align-text-top"> -->
-            <img src="./images/MyLogo3.jpg" class="img-fluid rounded-circle justify-content-end p-3" alt="Logo">
-          </a>
-           <!-- Navbar toggle for mobile view -->
-           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          
-            <li class="nav-item mt-3">      
-              <a class="nav-link active text-white" aria-current="page" href="./about.html">About</a>
-            </li>
-            
-            <li class="nav-item mt-3">
-              <a class="nav-link text-white" href="./projects.html">Projects</a>
-            </li>
-            <li class="nav-item mt-3">
-              <a class="nav-link text-white" href="./services.html">Services</a>
-            </li>
-            <li class="nav-item mt-3">
-              <a class="nav-link text-white" href="./contact.html">Contact</a>
-            </li>
-            <li class="nav-item mt-3">
-              <a class="nav-link disabled" aria-disabled="true"></a>
-            </li>
             <!-- Light/Dark mode toggle -->
             <button id="theme-toggle" class="btn btn-outline-secondary ms-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-sun-fill" viewBox="0 0 16 16">
               <path d="M11.473 11a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"/>
@@ -368,6 +405,13 @@ nav ul li a {
           toggleButton.textContent = 'Dark Mode';
         }
       });
+      const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Toggle the visibility of the nav links
+});
+
       
     </script>
     

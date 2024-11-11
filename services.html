@@ -138,7 +138,10 @@ display:inline-table;
 /* width: calc(25% - 40px); */
     }
 }
-
+.py-custom {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
 @media (max-width: 576px) {
     .card-title {
         font-size: 0.9rem; /* Even smaller title on small screens */
@@ -150,7 +153,7 @@ display:inline-table;
     }
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     nav {
         flex-direction:column; 
         width: 100%;
@@ -184,58 +187,96 @@ display:inline-table;
             background-color: white;
             margin: 3px 0;
         }
-} */
+} 
 
-</style>
-  </head>
-    <body class="light-mode text-bg-primmary p-3">
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+         /* Hide nav links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 60px; /* Position below the navbar */
+        left: 0;
+        width: 100%; /* Full width */
+        background-color: black;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+    nav {
+        flex-direction: column; /* Stack items vertically */
+    }
+    nav ul {
+        /*display: none; /* Hide the menu by default */
+        flex-direction: column;
+        width: 100%;
+    }
+    nav.active ul {
+        display: flex; /* Show menu when active */
+    }
+    h5 {
+      font-size: 0.6rem; /* Smaller title on medium screens */  
+    }
+    p{
+      font-size: 1rem;
+    }
+    .toggle-button {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+        }
+}
+
+  </style>
+</head>
+
+   <header>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container text-center">
    
-      <!-- Header Section -->
-       <header>
-      <body class="light-mode text-bg-primmary p-3">
-        <div class="container text-center display: flex">
-          
-          <!-- <h1 class="animated-text">Hello, Welcome to My Portfolio!</h1>
-          <p class="lead">Front-End Developer | Web Enthusiast</p> -->
-        </div>
+    <a class="navbar-brand" href="./index.html">
       
-     
+      <img src="./images/MyLogo3.jpg" class="img-fluid rounded-circle justify-content-end" alt="Logo">
+    </a>
+     <!-- Navbar toggle for mobile view -->
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">      
+        <a class="nav-link text-white" aria-current="page" href="./about.html">About</a>
+      </li>
       
-        <!-- <h1 class="text-bg-secondary nav-justified p-3">Welcome to My Portfolio</h1> -->
-        
-      </header>
-      
-      <ul class="nav bg-dark justify-content-end display:flex">
-      
-        <!-- <img src="/MyPortfolio/images/MyLogo3.jpg" class="img-fluid rounded-circle justify-left" alt="...">  -->
-        <!-- <ul class="nav nav-tabs">
-          <img src="" alt="Logo" class="navbar-brand d-inline-block align-text-left">
-      
-        </ul> -->
-        <a class="navbar-brand fs-2 align-text-left text-bg-primmary me-auto p-3 flex" href="./index.html">
-          <img src="./images/MyLogo3.jpg" class="img-fluid rounded-circle" alt="Logo">
-          <!-- <img src="/MyPortfolio/images/MyLogo3.jpg" alt="Logo" class="d-inline-block align-text-top"> -->
-          
-        </a>
-         <!-- Navbar toggle for mobile view -->
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-          <li class="nav-item pt-3">      
-            <a class="nav-link active" aria-current="page" href="./about.html">About</a>
-          </li>
-          <li class="nav-item pt-3">
-            <a class="nav-link" href="./projects.html">Projects</a>
-          </li>
-          <li class="nav-item pt-3">
-            <a class="nav-link" href="./services.html">Services</a>
-          </li>
-          <li class="nav-item pt-3">
-            <a class="nav-link" href="./contact.html">Contact</a>
-          </li>
-          <li class="nav-item pt-3">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="./projects.html">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="./services.html">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="./contact.html">Contact</a>
+      </li>
+      <li class="nav-item1">
+        <a class="nav-link disabled" aria-disabled="true"></a>
+      </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+  </header>
           <!-- Light/Dark mode toggle -->
           <button id="theme-toggle" class="btn btn-outline-secondary ms-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cloud-sun-fill" viewBox="0 0 16 16">
             <path d="M11.473 11a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"/>
@@ -253,7 +294,7 @@ display:inline-table;
       <p class="card-text">I create responsive and user-friendly websites using HTML, CSS, and JavaScript.</p>
   </div>
   <div class="service-card">
-      <h3 class="card-title p-3">UI/UX Design</h3>
+      <h3 class="card-title p-3 py-custom">UI/UX Design</h3>
       <p class="card-text">I design intuitive interfaces and engaging user experiences for web and mobile applications.</p>
   </div>
   <div class="service-card">
@@ -266,9 +307,6 @@ display:inline-table;
   </div>
 </section>
       </div>
-      </div>
-    </div>
-  </div>
   
 <footer>
   <p>&copy;<img src="./images/maple-5.png" alt="maple">2024 My Portfolio. All rights reserved.</p>
@@ -296,6 +334,13 @@ card.addEventListener('click', () => {
   alert('More details about ' + card.querySelector('h3').innerText);
 });
 });
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Toggle the visibility of the nav links
+});
+
   </script>
 
  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
