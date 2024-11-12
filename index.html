@@ -45,11 +45,12 @@ background-color: #333;
 color: #fff;
 }
 .img-fluid {
+            margin-top: 50px;
             display: block;  /* Make it a block element */
             margin-left: auto;     /* Auto margin on the left */
             margin-right: auto;     /* Auto margin on the right */
-            position: initial;
-            
+            border-radius: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);             
         }
         /* Base styles for navigation */
 nav {
@@ -130,10 +131,10 @@ nav {
         display: flex; /* Show menu when active */
     }
     h5 {
-      font-size: 0.6rem; /* Smaller title on medium screens */  
+      font-size: 1rem; /* Smaller title on medium screens */  
     }
     p{
-      font-size: 1rem;
+      font-size: 0.6rem;
     }
     .toggle-button {
                 display: flex;
@@ -156,7 +157,7 @@ nav {
    
     <a class="navbar-brand" href="./index.html">
       
-      <img src="./images/MyLogo3.jpg" class="img-fluid rounded-circle justify-content-end" alt="Logo">
+      <img src="./images/MyLogo3.jpg" class="img-fluid1 rounded-circle justify-content-end" alt="Logo">
     </a>
      <!-- Navbar toggle for mobile view -->
      <button id="top" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -189,7 +190,7 @@ nav {
     <div class="row">
       <div class="col-md-6">
         
-        <img src="./images/myprofile1-img.png" class="img-fluid border-dark rounded p-3 pl-3 justify-content" alt="...">
+        <img src="./images/myprofile-img.png" class="img-fluid" alt="Profile pic">
       </div>
       
       <div class="col-md-4">
