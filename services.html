@@ -90,7 +90,14 @@ nav {
     background-color: #333;
     padding: 10px;
 }
+.body{
+  background-image: url('./images/pattern.jpg');
+            background-repeat:repeat-y; /* Repeat the pattern */
+            height: 100vh; /* Full height */
+            margin: 0;
+            background-color: whitesmoke;
 
+}
 
 footer {
 text-align: center;
@@ -250,7 +257,7 @@ display:inline-table;
 </head>
 
    <header>
-  <body>
+  <body class="body">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <div class="container text-center">
    
@@ -260,7 +267,7 @@ display:inline-table;
     </a>
      <!-- Navbar toggle for mobile view -->
      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon bg-primary"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
